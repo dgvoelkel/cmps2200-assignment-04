@@ -8,10 +8,10 @@
 
 
 
-- **1a.** A d-ary heap has at most $ d^i $ nodes on each level, so 1 node at level 0, d nodes at level 1, $ d^2 $ nodes at level 2, and so on. The maximum depth of this heap is $ log_d n $.
+- **1a.** A d-ary heap has at most $d^i$ nodes on each level, so 1 node at level 0, d nodes at level 1, $ d^2 $ nodes at level 2, and so on. The maximum depth of this heap is $log_d n$.
 
 
-- **1b.** For the insert function, the node is placed at the first free leaf, and it is compared to the parent at each level, at most $log_d n$ times. Therefore $W(n) \in O(log_d n)$. For delete min element, you take the right-most child of the root as the new root and you have to find the minimmum of d children $log_d n$ times, which is $ O(d* log_d n).
+- **1b.** For the insert function, the node is placed at the first free leaf, and it is compared to the parent at each level, at most $log_d n$ times. Therefore $W(n) \in O(log_d n)$. For delete min element, you take the right-most child of the root as the new root and you have to find the minimmum of d children $log_d n$ times, which is $ O(d* log_d n)$.
 
 
 - **1c.** For Dijkstra's Algorithm, the heap is at most size |V|, so n= |V|. The number of delete-min calls is |V| since each node is removed from the heap once. Therefore the total work of delete-min is $O(|V|*log_d |V|)$. The number of insertions is at most |E| since each can cause at most 1 update. Therefore, the total work of insert is $O(|E|*log_d|V|)$. Therefore the total work of Dijkstra's Algorithm with d-ary heap is $O( |V|*log_d |V| + |E|*log_d|V|)$.
